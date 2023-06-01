@@ -40,8 +40,17 @@ Route::middleware('auth')->group(function () {
  * --------------------------------------------------------
  */
 
-Route::get('/usuarios',[UserController::class,'index'])->name('usuario.index');
+Route::get('/usuarios',[UserController::class,'index'])
+        ->name('usuario.index');
 
+Route::get('/usuarios/novo',[UserController::class,'create'])
+        ->name('usuario.create');
+
+Route::get('/usuarios/{id}',[UserController::class,'show'])
+        ->name('usuario.show');
+
+Route::post('/usuarios/cadastrar',[UserController::class,'store'])
+        ->name('usuario.store');
 
 
 

@@ -11,19 +11,20 @@
 <table class="table table-border table-striped">
 
     <thead>
-
-        <tr>
+     <tr>
+            <th>
             Ações
-        </tr>
-        <tr>
+             </th>
+            <th>
             Nome
-        </tr>
-        <tr>
+             </th>
+             <th>
             Email
-        </tr>
-        <th>
+             </th>
+            <th>
             Criado em
-        </th>
+             </th>
+     </tr>
 
     </thead>
 
@@ -32,7 +33,13 @@
 
 
         <tr>
-            <td></td>
+            <td>
+                <a class="btn btn-dark" href="{{ route('usuario.show', ['id'=>$usuario->id]) }}">
+
+                    Ver
+
+                </a>
+            </td>
             <td>{{$usuario->name}}</td>
             <td>{{$usuario->email}}</td>
             <td>{{$usuario->created_at->format('d/m/Y')}}</td>
